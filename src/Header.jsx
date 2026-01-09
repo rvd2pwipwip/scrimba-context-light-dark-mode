@@ -1,7 +1,16 @@
+import React from "react";
+import { ThemeContext } from "./App";
+
 const Header = () => {
+  const { theme } = React.useContext(ThemeContext);
+
+  const capitalizeFirstChar = (string) => {
+    return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
+  };
+
   return (
-    <header className="dark-theme">
-      <h1>Dark Theme</h1>
+    <header className={`${theme}-theme`}>
+      <h1>{`${capitalizeFirstChar(theme)} Theme`}</h1>
     </header>
   );
 };
