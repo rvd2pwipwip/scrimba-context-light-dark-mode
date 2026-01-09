@@ -1,10 +1,12 @@
-import "./App.css";
+import Header from "./Header";
+import Button from "./Button";
 
 function App() {
   return (
-    <>
-      <p>Context</p>
-    </>
+    <div className="container dark-theme">
+      <Header />
+      <Button />
+    </div>
   );
 }
 
